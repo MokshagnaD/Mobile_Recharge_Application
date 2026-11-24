@@ -1,0 +1,880 @@
+/* ========================================================
+   Jio Smart Recharge - Modern Brand Design System
+   ======================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Jio Signature Brand Colors */
+  --jio-blue-dark: #0a2885;
+  --jio-blue: #0050d5;
+  --jio-blue-light: #e8f0fe;
+  --jio-blue-hover: #0043b8;
+  --jio-cyan: #00b4d8;
+  --jio-red: #e0144c;
+  --jio-red-light: #fee8ef;
+  --jio-yellow: #f59e0b;
+  --jio-green: #10b981;
+  --jio-green-light: #ecfdf5;
+
+  /* Neutral Surface Colors */
+  --bg-page: #f4f6fc;
+  --bg-card: #ffffff;
+  --bg-subtle: #f8fafc;
+  --border-light: #e2e8f0;
+  --border-hover: #cbd5e1;
+
+  /* Typography */
+  --text-main: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+  --text-light: #94a3b8;
+  --text-white: #ffffff;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(10, 40, 133, 0.05);
+  --shadow-md: 0 4px 12px rgba(10, 40, 133, 0.08);
+  --shadow-lg: 0 10px 25px rgba(10, 40, 133, 0.12);
+  --shadow-xl: 0 20px 40px rgba(10, 40, 133, 0.18);
+  --shadow-glow: 0 0 20px rgba(0, 80, 213, 0.35);
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 22px;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ========================================================
+   Layout & Container
+   ======================================================== */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+/* ========================================================
+   Jio Navbar & Top Header
+   ======================================================== */
+.jio-navbar {
+  background: linear-gradient(135deg, var(--jio-blue-dark) 0%, var(--jio-blue) 100%);
+  color: var(--text-white);
+  padding: 14px 24px;
+  box-shadow: var(--shadow-md);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.jio-nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.jio-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.jio-logo-badge {
+  width: 42px;
+  height: 42px;
+  background: var(--jio-red);
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.15rem;
+  letter-spacing: -0.5px;
+  color: var(--text-white);
+  box-shadow: 0 4px 10px rgba(224, 20, 76, 0.4);
+}
+
+.jio-brand-text h1 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.2px;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.jio-brand-tagline {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.jio-5g-tag {
+  background: #ffc107;
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 1px 6px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+.jio-user-status {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  backdrop-filter: blur(8px);
+}
+
+.jio-user-meta {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+.jio-user-phone {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.jio-user-sim {
+  font-size: 0.7rem;
+  color: #93c5fd;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px;
+}
+
+.jio-status-dot {
+  width: 7px;
+  height: 7px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #10b981;
+}
+
+.jio-logout-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.jio-logout-btn:hover {
+  background: var(--jio-red);
+  border-color: var(--jio-red);
+}
+
+/* ========================================================
+   Jio Secondary Navigation Bar
+   ======================================================== */
+.jio-subnav {
+  background: #ffffff;
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.jio-subnav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+}
+
+.jio-nav-item {
+  background: transparent;
+  border: none;
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+}
+
+.jio-nav-item:hover {
+  background: var(--jio-blue-light);
+  color: var(--jio-blue);
+}
+
+.jio-nav-item.active {
+  background: var(--jio-blue);
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 80, 213, 0.3);
+}
+
+.jio-nav-badge {
+  background: var(--jio-red);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 1px 6px;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+}
+
+/* ========================================================
+   Jio Active Subscription Banner Widget
+   ======================================================== */
+.jio-balance-widget {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  border: 1px solid #dbeafe;
+  border-radius: var(--radius-xl);
+  padding: 22px 26px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow-md);
+  position: relative;
+  overflow: hidden;
+}
+
+.jio-balance-widget::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--jio-blue);
+}
+
+.jio-widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.jio-widget-title h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--jio-blue-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.jio-widget-title p {
+  font-size: 0.825rem;
+  color: var(--text-muted);
+}
+
+.jio-5g-welcome-badge {
+  background: linear-gradient(135deg, #0a2885 0%, #0050d5 100%);
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 80, 213, 0.25);
+}
+
+.jio-balance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 18px;
+  align-items: center;
+}
+
+.jio-meter-card {
+  background: #ffffff;
+  padding: 14px 18px;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-light);
+}
+
+.jio-meter-label {
+  font-size: 0.775rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.jio-meter-value {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.jio-meter-bar-bg {
+  width: 100%;
+  height: 8px;
+  background: #e2e8f0;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.jio-meter-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #0050d5 100%);
+  border-radius: var(--radius-full);
+  transition: width 0.5s ease;
+}
+
+/* ========================================================
+   Category Selector Tabs
+   ======================================================== */
+.jio-category-tabs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 8px;
+  margin-bottom: 20px;
+}
+
+.jio-tab-pill {
+  padding: 9px 18px;
+  background: #ffffff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  cursor: pointer;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: var(--transition);
+  box-shadow: var(--shadow-sm);
+}
+
+.jio-tab-pill:hover {
+  border-color: var(--jio-blue);
+  color: var(--jio-blue);
+  transform: translateY(-1px);
+}
+
+.jio-tab-pill.active {
+  background: var(--jio-blue);
+  color: #ffffff;
+  border-color: var(--jio-blue);
+  box-shadow: 0 4px 12px rgba(0, 80, 213, 0.3);
+}
+
+/* ========================================================
+   Plan Cards Grid - Authentic Jio Styling
+   ======================================================== */
+.jio-plans-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 22px;
+  margin-top: 10px;
+}
+
+.jio-plan-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.jio-plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+  border-color: #93c5fd;
+}
+
+.jio-card-tag {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: var(--jio-red);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 800;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.jio-card-tag.true5g {
+  background: linear-gradient(135deg, #0a2885 0%, #0050d5 100%);
+}
+
+.jio-card-tag.bestseller {
+  background: #e0144c;
+}
+
+.jio-card-tag.ott {
+  background: #7928ca;
+}
+
+.jio-plan-price-block {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+}
+
+.jio-currency {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.jio-price-val {
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: var(--text-main);
+  letter-spacing: -1px;
+}
+
+.jio-validity-badge {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--jio-blue);
+  background: var(--jio-blue-light);
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+  margin-left: 8px;
+}
+
+.jio-plan-name {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 12px;
+}
+
+.jio-features-box {
+  background: var(--bg-subtle);
+  border-radius: var(--radius-md);
+  padding: 12px 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.jio-feature-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.jio-feature-title {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.jio-feature-value {
+  font-size: 0.875rem;
+  font-weight: 800;
+  color: var(--text-main);
+}
+
+.jio-ott-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 18px;
+  min-height: 26px;
+}
+
+.jio-ott-pill {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: #334155;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.jio-recharge-btn {
+  margin-top: auto;
+  width: 100%;
+  padding: 12px;
+  background: var(--jio-blue);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  box-shadow: 0 4px 10px rgba(0, 80, 213, 0.25);
+}
+
+.jio-recharge-btn:hover {
+  background: var(--jio-blue-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 80, 213, 0.35);
+}
+
+/* ========================================================
+   Login Screen - Clean Jio Style
+   ======================================================== */
+.jio-login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(145deg, #071e68 0%, #0050d5 50%, #0077ff 100%);
+  padding: 20px;
+}
+
+.jio-login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 440px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  padding: 36px 32px;
+  text-align: center;
+  position: relative;
+}
+
+.jio-login-header {
+  margin-bottom: 28px;
+}
+
+.jio-login-logo {
+  width: 64px;
+  height: 64px;
+  background: var(--jio-red);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  font-weight: 900;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  box-shadow: 0 8px 20px rgba(224, 20, 76, 0.35);
+}
+
+.jio-input-group {
+  position: relative;
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+.jio-input-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 6px;
+}
+
+.jio-phone-input-wrap {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: #fff;
+  transition: var(--transition);
+}
+
+.jio-phone-input-wrap:focus-within {
+  border-color: var(--jio-blue);
+  box-shadow: 0 0 0 4px rgba(0, 80, 213, 0.12);
+}
+
+.jio-country-flag {
+  padding: 12px 14px;
+  background: var(--bg-subtle);
+  border-right: 1px solid var(--border-light);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.jio-phone-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: none;
+  outline: none;
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.jio-btn-primary {
+  width: 100%;
+  padding: 14px;
+  background: var(--jio-blue);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-lg);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 8px;
+  box-shadow: 0 4px 12px rgba(0, 80, 213, 0.3);
+}
+
+.jio-btn-primary:hover:not(:disabled) {
+  background: var(--jio-blue-hover);
+  transform: translateY(-2px);
+}
+
+.jio-btn-primary:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.jio-btn-secondary {
+  width: 100%;
+  padding: 12px;
+  background: #ffffff;
+  color: var(--jio-blue);
+  border: 2px solid var(--jio-blue);
+  border-radius: var(--radius-lg);
+  font-size: 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  margin-top: 10px;
+}
+
+.jio-btn-secondary:hover {
+  background: var(--jio-blue-light);
+}
+
+/* ========================================================
+   Modals & Checkout Sheets
+   ======================================================== */
+.jio-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.65);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.jio-modal-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-xl);
+  overflow: hidden;
+  animation: jioModalZoom 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes jioModalZoom {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.jio-modal-head {
+  padding: 18px 24px;
+  background: linear-gradient(135deg, var(--jio-blue-dark) 0%, var(--jio-blue) 100%);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.jio-modal-head h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.jio-modal-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: #fff;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.1rem;
+}
+
+.jio-modal-body {
+  padding: 24px;
+}
+
+.jio-payment-option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  border: 2px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.jio-payment-option:hover,
+.jio-payment-option.selected {
+  border-color: var(--jio-blue);
+  background: var(--jio-blue-light);
+}
+
+/* ========================================================
+   Receipt & Status UI
+   ======================================================== */
+.jio-receipt-card {
+  background: #ffffff;
+  border-radius: var(--radius-xl);
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-lg);
+  padding: 32px;
+  max-width: 560px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.jio-success-icon {
+  width: 72px;
+  height: 72px;
+  background: var(--jio-green);
+  color: #fff;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.35);
+  animation: jioPop 0.4s ease;
+}
+
+@keyframes jioPop {
+  0% { transform: scale(0.6); }
+  70% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.jio-receipt-table {
+  width: 100%;
+  margin: 22px 0;
+  text-align: left;
+}
+
+.jio-receipt-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #f1f5f9;
+  font-size: 0.9rem;
+}
+
+.jio-receipt-row:last-child {
+  border-bottom: none;
+}
+
+/* ========================================================
+   Responsive Breakpoints
+   ======================================================== */
+@media (max-width: 768px) {
+  .jio-nav-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .jio-user-status {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .jio-plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .jio-balance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .main-content {
+    padding: 16px 12px 60px;
+  }
+}

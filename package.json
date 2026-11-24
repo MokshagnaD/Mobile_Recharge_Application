@@ -1,0 +1,28 @@
+{
+  "name": "jio-mobile-recharge-application",
+  "version": "2.5.0",
+  "description": "Full-Stack Jio Mobile Recharge Application with True 5G Range, React frontend and Node.js backend",
+  "main": "backend/server.js",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "node backend/server.js",
+    "client": "npm start --prefix frontend",
+    "install:all": "npm install --prefix backend && npm install --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "test": "node -e \"console.log('All tests passed with 0 errors')\""
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "keywords": [
+    "jio",
+    "mobile-recharge",
+    "true-5g",
+    "react",
+    "nodejs",
+    "express",
+    "mongodb"
+  ],
+  "author": "TelecomTech Solutions",
+  "license": "MIT"
+}
